@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Product List</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Product List</h1>
+        <a href="/products/new" class="btn btn-primary">Add New Product</a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product Code</th>
+                    <th>Product Name</th>
+                    <th>Product Date</th>
+                    <th>Product Origin Price</th>
+                    <th>Quantity</th>
+                    <th>Product Store Code</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% products.forEach(product => { %>
+                    <tr>
+                        <td><%= product.productCode %></td>
+                        <td><%= product.productName %></td>
+                        <td><%= product.productDate.toISOString().slice(0, 10) %></td>
+                        <td><%= product.productOriginPrice %></td>
+                        <td><%= product.quantity %></td>
+                        <td><%= product.productStoreCode %></td>
+                        <td>
+                            <form action="/products/<%= product._id %>?_method=DELETE" method="POST">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

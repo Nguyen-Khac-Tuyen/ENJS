@@ -1,0 +1,11 @@
+{
+  "_id": {
+    "$oid": "66adc54ff460c86c8956801e"
+  },
+  "productCode": "A12",
+  "productName": "Product 1",
+  "productDate": "2023-08-22T00:00:00Z",
+  "productOriginPrice": 5000000,
+  "quantity": 1000,
+  "productStoreCode": "S10"
+}

@@ -1,0 +1,29 @@
+<%- include('../layout') %>
+<h2>Add New Product</h2>
+<form action="/products" method="POST">
+  <div class="form-group">
+    <label for="productCode">Product Code:</label>
+    <input type="text" class="form-control" name="product[productCode]" required>
+  </div>
+  <div class="form-group">
+    <label for="productName">Product Name:</label>
+    <input type="text" class="form-control" name="product[productName]" required>
+  </div>
+  <div class="form-group">
+    <label for="productDate">Product Date:</label>
+    <input type="date" class="form-control" name="product[productDate]" required>
+  </div>
+  <div class="form-group">
+    <label for="productOriginPrice">Product Origin Price:</label>
+    <input type="number" class="form-control" name="product[productOriginPrice]" required>
+  </div>
+  <div class="form-group">
+    <label for="quantity">Quantity:</label>
+    <input type="number" class="form-control" name="product[quantity]" required>
+  </div>
+  <div class="form-group">
+    <label for="productStoreCode">Product Store Code:</label>
+    <input type="text" class="form-control" name="product[productStoreCode]" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Add Product</button>
+</form>
